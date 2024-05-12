@@ -2,19 +2,26 @@ package com.encipher.employeemanagementapi.model;
 
 import lombok.Data;
 
+import java.time.LocalDate;
+
 @Data
 public class Employee {
 
-    private long id;
+    private int id;
     private String firstName;
     private String lastName;
     private String email;
-    private String username;
-    private String password;
-    private String address;
-    private String phone;
-    private int role;
-    private int managerId;
-    private String roles;
+    private String jobTitle;
+    private String department;
+    private LocalDate hireDate;
+    private double salary;
+
+
+    @Override
+    public String toString() {
+        return "Employee [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + ", jobTitle=" + jobTitle + ", department=" + department + ", hireDate=" + hireDate + ", salary=" + salary + "]";
+
+
+    }
 
 }
